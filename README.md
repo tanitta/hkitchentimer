@@ -1,4 +1,5 @@
 # Houdini Kitchen Timer
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/tanitta/hkitchentimer/blob/main/LICENSE)
 
 **Houdini Kitchen Timer** is a lightweight Houdini package that alerts you with a sound whenever the UI event loop has been blocked for more than a specified duration (e.g., due to a long cook or save operation).  
 It's designed to help you stay aware of heavy operations and long waits during Houdini sessions.
