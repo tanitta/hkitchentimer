@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/tanitta/hkitchentimer/blob/main/LICENSE)
 
 Houdini Kitchen Timer is a lightweight Houdini package that notifies you with a sound when a long-running operation (such as cooking or saving) has finished.
-It helps you catch the end of heavy processing without staring at the screen, allowing you to step away or multitask with confidence.
+It helps you catch the end of heavy processing without staring at the screen, allowing you to step away or multitask.
 
 ## Features
 
