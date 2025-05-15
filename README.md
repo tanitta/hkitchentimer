@@ -1,33 +1,22 @@
-# KitchenTimer
+# Houdini Kitchen Timer
 
-**KitchenTimer** is a lightweight Houdini package that alerts you with a sound whenever the UI event loop has been blocked for more than a specified duration (e.g., due to a long cook or save operation).  
+**Houdini Kitchen Timer** is a lightweight Houdini package that alerts you with a sound whenever the UI event loop has been blocked for more than a specified duration (e.g., due to a long cook or save operation).  
 It's designed to help you stay aware of heavy operations and long waits during Houdini sessions.
 
-## 🔧 Features
+## Features
 
 - Monitors Houdini's main event loop in real time.
 - Automatically detects interruptions (e.g., cooking, file saving).
 - Plays a system sound (e.g., `notify.wav`) if the delay exceeds a threshold.
-- Easy to install — just drop it into your Houdini packages folder.
 
-## 🛠️ Installation
+## Installation
 
-1. Place the `hkitchentimer` folder in your Houdini `packages` directory:
-   ```
-   $HOUDINI_USER_PREF_DIR/packages/
-   ```
+1. Clone This Repository into your `$HOUDINI_PREF_DIR/packages`.
+2. Copy and paste `hkitchentimer.json` in it into `$HOUDINI_PREF_DIR/packages`.
 
-2. Make sure the following files exist:
-   ```
-   hkitchentimer/
-   ├── hkitchentimer.json
-   ├── __init__.py
-   └── pythonrc.py
-   ```
+cf. [Houdini packages | Houdini help](https://www.sidefx.com/docs/houdini/ref/plugins.html)
 
-3. Launch Houdini — the timer will automatically activate on startup.
-
-## 🔔 Behavior
+## Behavior
 
 - On every UI frame, it checks how much time has passed since the last update.
 - If the delay exceeds `5.0` seconds (default threshold), it plays the sound file:
@@ -36,7 +25,7 @@ It's designed to help you stay aware of heavy operations and long waits during H
   ```
 - The sound is played asynchronously using `winsound.SND_ASYNC`, so it won’t block Houdini.
 
-## ⚙️ Configuration
+## Configuration
 
 You can modify the threshold value in `pythonrc.py`:
 
@@ -50,12 +39,8 @@ You can also replace the sound file path in `__init__.py`:
 winsound.PlaySound("C:\\Windows\\Media\\notify.wav", ...)
 ```
 
-## 🧠 Notes
+## Notes
 
 - Currently, the script is Windows-only due to the use of the `winsound` module.
 - You can further extend it to support different OSs, send system notifications, or display pop-ups.
-- Useful for debugging or background batch work detection.
 
-## 📄 License
-
-MIT License or your own custom terms — feel free to modify and use as needed.
