@@ -1,0 +1,8 @@
+{
+	"hpath": "$HKITCHENTIMER",
+    "env": [
+        {
+            "HKITCHENTIMER": "$HOUDINI_PACKAGE_PATH/hkitchentimer"
+        }
+    ]
+}
