@@ -30,7 +30,7 @@ cf. [Houdini packages | Houdini help](https://www.sidefx.com/docs/houdini/ref/pl
 
 You can customize the behavior of Kitchen Timer using environment variables in your houdini.env file.
 
-### HKITCHENTIMER_DURATION
+### `HKITCHENTIMER_DURATION`
 Type: float
 
 Default: 5.0
@@ -43,7 +43,7 @@ If the delay exceeds this value, a sound will be played when Houdini becomes res
   HKITCHENTIMER_DURATION = 10
 ```
 
-### HKITCHENTIMER_SOUNDPATH
+### `HKITCHENTIMER_SOUNDPATH`
 Type: string (absolute file path to .wav)
 
 Default: C:\Windows\Media\notify.wav
@@ -53,6 +53,18 @@ Path to the .wav file that will be played as a notification sound when the delay
 
 ```
   HKITCHENTIMER_SOUNDPATH = "C:\Windows\Media\tada.wav"
+```
+
+### `HKITCHENTIMER_VOLUME`
+Type: float
+
+Default: 1.0
+
+Description:
+Gain multiplier for the notification sound. For example, 2.0 doubles the volume.
+
+```
+HKITCHENTIMER_VOLUME = 2.0
 ```
 
 ## Notes
