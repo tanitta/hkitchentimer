@@ -30,6 +30,12 @@ cf. [Houdini packages | Houdini help](https://www.sidefx.com/docs/houdini/ref/pl
 
 You can customize the behavior of Kitchen Timer using environment variables in your houdini.env file.
 
+```
+HKITCHENTIMER_DURATION = 5
+HKITCHENTIMER_SOUNDPATH = "C:\Windows\Media\tada.wav"
+HKITCHENTIMER_VOLUME = 2
+```
+
 ### `HKITCHENTIMER_DURATION`
 Type: float
 
