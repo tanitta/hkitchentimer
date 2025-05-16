@@ -28,16 +28,31 @@ cf. [Houdini packages | Houdini help](https://www.sidefx.com/docs/houdini/ref/pl
 
 ## Configuration
 
-You can modify the threshold value in `pythonrc.py`:
+You can customize the behavior of Kitchen Timer using environment variables in your houdini.env file.
 
-```python
-_kitchen_timer_instance = hkt.KitchenTimer(threshold=5.0)
+### HKITCHENTIMER_DURATION
+Type: float
+
+Default: 5.0
+
+Description:
+Specifies the threshold (in seconds) after which the timer considers Houdini as "blocked."
+If the delay exceeds this value, a sound will be played when Houdini becomes responsive again.
+
+```
+  HKITCHENTIMER_DURATION = 10
 ```
 
-You can also replace the sound file path in `__init__.py`:
+### HKITCHENTIMER_SOUNDPATH
+Type: string (absolute file path to .wav)
 
-```python
-winsound.PlaySound("C:\\Windows\\Media\\notify.wav", ...)
+Default: C:\Windows\Media\notify.wav
+
+Description:
+Path to the .wav file that will be played as a notification sound when the delay exceeds the threshold.
+
+```
+  HKITCHENTIMER_SOUNDPATH = "C:\Windows\Media\tada.wav"
 ```
 
 ## Notes
